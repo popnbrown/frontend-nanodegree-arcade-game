@@ -7,10 +7,12 @@ There are several ways to load the game:
 
 1. Navitate to my [Github Page](http://popnbrown.github.io/arcade-game).
 2. Zip file:
+
   a. Download the [zip](https://github.com/popnbrown/frontend-nanodegree-arcade-game/archive/master.zip)
   b. Unzip the downloaded file
   c. Open index.html in any browser that has Javascript enabled and is HTML5 compatible
 3. Git Fork is the last way, please see disclaimers below. [Fork this repo](https://github.com/popnbrown/frontend-nanodegree-arcade-game#fork-destination-box)
+
   * You must have a Github account in order to fork
   * You can use this method to make modifications to the game
 
