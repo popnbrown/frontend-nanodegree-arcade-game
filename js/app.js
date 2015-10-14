@@ -41,8 +41,8 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
 
-    //collision detection
-    if(this.x + COLUMN_WIDTH >= player.x && this.x <= player.x + COLUMN_WIDTH && player.y == this.y){
+    //collision detection - make bug left point smaller to give a better visual cue to player
+    if(this.x + COLUMN_WIDTH * 0.75 >= player.x && this.x <= player.x + COLUMN_WIDTH && player.y == this.y){
         player.reset();
     }
 
