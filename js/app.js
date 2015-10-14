@@ -77,8 +77,11 @@ var Player = function() {
 
 //handle scoring here
 Player.prototype.update = function(dt) {
-    if(this.y >= INITIAL_ENEMY_Y[0] && this.y <= INITIAL_ENEMY_Y[2])
+    if(this.y >= INITIAL_ENEMY_Y[0] && this.y <= INITIAL_ENEMY_Y[2]) {
         this.score = this.score + this.scoreMultiplier * dt;
+    } else if (this.score > 0 && this.y > INITIAL_ENEMY_Y[2]) {
+        this.score = this.score - this.scoreMultiplier / 2 * dt;
+    }
     document.getElementById('score').innerHTML = Math.round(this.score).toString(); //display score
 }
 
