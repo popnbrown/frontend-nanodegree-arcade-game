@@ -1,6 +1,6 @@
 /* Global Variables */
 var COLUMN_WIDTH = 101;
-var ROW_HEIGHT = 83;    
+var ROW_HEIGHT = 83;
 var ROW_OFFSET = -20;
 
 /* Player Variables */
@@ -77,7 +77,8 @@ var Player = function() {
 
 //handle scoring here
 Player.prototype.update = function(dt) {
-    this.score = this.score + this.scoreMultiplier * dt;
+    if(this.y >= INITIAL_ENEMY_Y[0] && this.y <= INITIAL_ENEMY_Y[2])
+        this.score = this.score + this.scoreMultiplier * dt;
     document.getElementById('score').innerHTML = Math.round(this.score).toString(); //display score
 }
 
@@ -109,11 +110,14 @@ Player.prototype.render = function() {
 };
 
 //reset the player
-Player.prototype.reset = function() { 
+Player.prototype.reset = function() {
+    document.getElementById('score-list').innerHTML += '<li>'+Math.round(this.score).toString()+'</li>'; //add score to score lsit
+
+    //reset char location and score
     this.x = PLAYER_START_X;
     this.y = PLAYER_START_Y;
     this.score = 0;
-};
+}
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
