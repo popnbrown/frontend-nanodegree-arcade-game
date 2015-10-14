@@ -21,5 +21,5 @@ The object of the game is to avoid the bugs as long as you can while staying on 
 *Note:*
 
 * If your character gets hit by a bug or takes an unfortunate dive into water, the character will be reset.
-* The score will only increase if your character is on the road, going back on the grass will stop the score.
+* The score will only increase if your character is on the road, going back on the grass will DECREASE the score.
 * Below the current score, you will see a list of all the scores of your runs.
